@@ -13,9 +13,7 @@ public class Tester {
 
     @BeforeEach
     public void setUP() throws Exception{
-
        a = new Programmierer1(new String[][]{{ "A" , "C"}, {"C", "D"}, {"B", "C"}});
-
     }
 
 
@@ -25,7 +23,7 @@ public class Tester {
         String[] s = new String[]{"A","B","C"};
         assertTrue(a.isWellSorted(s));
 
-      }
+    }
 
     @Test
     @DisplayName("Array ist unsortiert")
@@ -60,18 +58,6 @@ public class Tester {
       assertFalse(a.isWellSorted(s));
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
     @Test
     @DisplayName("Array ist sortiert, verschachtelte")
     public void issortedschachtelt(){
@@ -104,7 +90,6 @@ public class Tester {
       assertTrue(a.isWellSorted(s));
     }
 
-
     @Test
     @DisplayName("Array sind Buchstaben, verschachtelte")
     public void islettersschachtelt(){
@@ -125,5 +110,4 @@ public class Tester {
       String[] s = new String[]{"A","A"};
       assertFalse(a.isWellSorted(s));
     }
-
 }
