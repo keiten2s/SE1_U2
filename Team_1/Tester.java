@@ -4,16 +4,18 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.Test;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.DisplayName;
 
 public class Tester {
 
-   /* @BeforeEach
-    public void setUP(){
+    private Programmierer1 a;
 
-     //   String[][] a = new Programmierer1();
-    }*/
+    @BeforeEach
+    public void setUP() throws Exception{
+
+       a = new Programmierer1();
+    }
 
 
 
@@ -43,7 +45,8 @@ public class Tester {
     @Test
     @DisplayName("Array ist sortiert")
     void issorted(){
-        assertTrue(Programmierer1.iswellSorted("A,B,C"));
+        String[] s = new String[]{"A","B","C"};
+        assertTrue(a.isWellSorted(s));
 
     }
 
