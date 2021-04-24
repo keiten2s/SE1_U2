@@ -17,7 +17,6 @@ public class Programmierer1 implements Interface {
             for (int j = 0; j < sequence.length; j++) {
                 if (sequence[i].charAt(0) == sequence[j].charAt(0))
                     return false;
-
             }
         }
 
