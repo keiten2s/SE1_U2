@@ -1,6 +1,7 @@
 package Team_1;
-public class Programmierer1 {
-    public static boolean isWellSorted( String[] sequence ) {
+public class Programmierer1 implements Interface {
+
+    public boolean isWellSorted( String[] sequence ) {
         for (int i = 0; i < sequence.length - 1; i++) {
             String s1 = sequence[i];
             String s2 = sequence[i + 1];
@@ -11,8 +12,14 @@ public class Programmierer1 {
         return true;
     }
 
-    public static boolean isWellSorted(String[][] sequence) {
-        
+    public boolean isWellSorted(String[][] sequences) {
+        for (int i = 0; i < sequences.length - 1; i++) {
+            String[] sequence = sequences[i];
+            if (isWellSorted(sequence) == false)
+                return false;
+        }
+
+        return true;
     }
 
     public static void main(String[] args) {

@@ -1,6 +1,7 @@
 package Team_1;
-//aa
 
-public class Interface {
-    
+public interface Interface {
+    public abstract boolean isWellSorted(String[] sequence);
+    public abstract boolean isWellSorted(String[][] sequence);
+
 }
