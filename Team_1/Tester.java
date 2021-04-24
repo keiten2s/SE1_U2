@@ -16,6 +16,7 @@ public class Tester {
     public void setUP() throws Exception{
 
        a = new Programmierer1(new String[][]{{ "A" , "C"}, {"C", "D"}, {"B", "C"}});
+
     }
 
 
@@ -38,8 +39,10 @@ public class Tester {
     @Test
     @DisplayName("Array ist leer")
     public void isempty(){
+
       String[] s = new String[]{""};
       assertTrue(a.isWellSorted(s));
+
     }
 
 
@@ -123,5 +126,5 @@ public class Tester {
       String[] s = new String[]{"A","A"};
       assertFalse(a.isWellSorted(s));
     }
-    
+
 }
