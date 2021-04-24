@@ -11,6 +11,10 @@ public class Programmierer1 {
         return true;
     }
 
+    public static boolean isWellSorted(String[][] sequence) {
+        
+    }
+
     public static void main(String[] args) {
         
     }
