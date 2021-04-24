@@ -104,7 +104,7 @@ public class Tester {
 
     @Test
     @DisplayName("Array mit gleichem Inhalt, verschachtelte")
-    public void siequalsschachtelt(){
+    public void isequalsschachtelt(){
       String[][] v = {{"A", "B"}, {"B", "C"}};
       a = new Programmierer1(v);
 
