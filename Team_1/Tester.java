@@ -15,13 +15,13 @@ public class Tester {
     @BeforeEach
     public void setUP() throws Exception{
 
-       a = new Programmierer1();
+       a = new Programmierer1(new String[][]{{ "A" , "C"}, {"C", "D"}, {"B", "C"}});
     }
 
 
     @Test
     @DisplayName("Array ist sortiert")
-    void issorted(){
+    public void issorted(){
         String[] s = new String[]{"A","B","C"};
         assertTrue(a.isWellSorted(s));
 
@@ -29,7 +29,7 @@ public class Tester {
 
     @Test
     @DisplayName("Array ist unsortiert")
-    void isnotsorted(){
+    public void isnotsorted(){
        String[] s = new String[]{"B","A","C"};
        assertTrue(a.isWellSorted(s));
 
@@ -37,26 +37,91 @@ public class Tester {
 
     @Test
     @DisplayName("Array ist leer")
-    void isempty(){
-      String[] s = new String[]{};
-      assertFalse(a.isWellSorted(s));
+    public void isempty(){
+      String[] s = new String[]{""};
+      assertTrue(a.isWellSorted(s));
     }
 
 
     @Test
     @DisplayName("Array sind Buchstaben")
-    void isletters(){
+    public void isletters(){
       String[] s = new String[]{"B","A","C","2"};
       assertFalse(a.isWellSorted(s));
     }
 
-  
     
     @Test
     @DisplayName("Array mit gleichem Inhalt")
-    void siequals(){
+    public void siequals(){
       String[] s = new String[]{"A","A"};
-      assertEquals(a.isWellSorted(s),a.isWellSorted(s));
+      assertFalse(a.isWellSorted(s));
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+    @Test
+    @DisplayName("Array ist sortiert, verschachtelte")
+    public void issortedschachtelt(){
+        String[][] v = {{"A", "B"}, {"B", "C"}}; 
+        a = new Programmierer1(v);
+
+        String[] s = new String[]{"A","B","C"};
+        assertTrue(a.isWellSorted(s));
+
+      }
+
+    @Test
+    @DisplayName("Array ist unsortiert, verschachtelte")
+    public void isnotsortedschachtelt(){
+       String[][] v = {{"A", "B"}, {"B", "C"}};
+       a = new Programmierer1(v);
+
+       String[] s = new String[]{"B","A","C"};
+       assertTrue(a.isWellSorted(s));
+
+    }
+
+    @Test
+    @DisplayName("Array ist leer, verschachtelte")
+    public void isemptyschachtelt(){
+      String[][] v = {{"A", "B"}, {"B", "C"}};
+      a = new Programmierer1(v);
+
+      String[] s = new String[]{""};
+      assertTrue(a.isWellSorted(s));
+    }
+
+
+    @Test
+    @DisplayName("Array sind Buchstaben, verschachtelte")
+    public void islettersschachtelt(){
+      String[][] v = {{"A", "B"}, {"B", "C"}};
+      a = new Programmierer1(v);
+
+      String[] s = new String[]{"B","A","C","2"};
+      assertFalse(a.isWellSorted(s));
+    }
+
+
+    @Test
+    @DisplayName("Array mit gleichem Inhalt, verschachtelte")
+    public void siequalsschachtelt(){
+      String[][] v = {{"A", "B"}, {"B", "C"}};
+      a = new Programmierer1(v);
+
+      String[] s = new String[]{"A","A"};
+      assertFalse(a.isWellSorted(s));
+    }
+    
 }
