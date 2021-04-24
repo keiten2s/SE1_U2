@@ -1,5 +1,6 @@
 package Team_1;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -18,43 +19,44 @@ public class Tester {
     }
 
 
-
-    @Test
-    @DisplayName("Array ist  vorhanden")
-    void isnull(){
-      //  assertNull(a);
-
-    }
-
-    @Test
-    @DisplayName("Array ist leer")
-    void isempty(){
-       // assertTrue();
-
-    }
-
-
-    @Test
-    @DisplayName("Array sind Buchstaben")
-    void isletters(){
-     //   assertTrue();
-
-    }
-
-  
     @Test
     @DisplayName("Array ist sortiert")
     void issorted(){
         String[] s = new String[]{"A","B","C"};
         assertTrue(a.isWellSorted(s));
 
+      }
+
+    @Test
+    @DisplayName("Array ist unsortiert")
+    void isnotsorted(){
+       String[] s = new String[]{"B","A","C"};
+       assertTrue(a.isWellSorted(s));
+
     }
 
     @Test
+    @DisplayName("Array ist leer")
+    void isempty(){
+      String[] s = new String[]{};
+      assertFalse(a.isWellSorted(s));
+    }
+
+
+    @Test
+    @DisplayName("Array sind Buchstaben")
+    void isletters(){
+      String[] s = new String[]{"B","A","C","2"};
+      assertFalse(a.isWellSorted(s));
+    }
+
+  
+    
+    @Test
     @DisplayName("Array mit gleichem Inhalt")
     void siequals(){
-     //   assertEquals();
-
+      String[] s = new String[]{"A","A"};
+      assertEquals(a.isWellSorted(s),a.isWellSorted(s));
     }
 
 }
