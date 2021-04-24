@@ -9,25 +9,25 @@ import org.junit.jupiter.api.DisplayName;
 
 public class Tester {
 
-    @BeforeEach
+   /* @BeforeEach
     public void setUP(){
 
-        String[][] a = new Programmierer1();
-    }
+     //   String[][] a = new Programmierer1();
+    }*/
 
 
 
     @Test
     @DisplayName("Array ist  vorhanden")
     void isnull(){
-        assertNull(a);
+      //  assertNull(a);
 
     }
 
     @Test
     @DisplayName("Array ist leer")
     void isempty(){
-        assertTrue();
+       // assertTrue();
 
     }
 
@@ -35,7 +35,7 @@ public class Tester {
     @Test
     @DisplayName("Array sind Buchstaben")
     void isletters(){
-        assertTrue();
+     //   assertTrue();
 
     }
 
@@ -43,14 +43,14 @@ public class Tester {
     @Test
     @DisplayName("Array ist sortiert")
     void issorted(){
-        assertTrue(a.iswellSorted( ));
+        assertTrue(Programmierer1.iswellSorted("A,B,C"));
 
     }
 
     @Test
     @DisplayName("Array mit gleichem Inhalt")
     void siequals(){
-        assertEquals();
+     //   assertEquals();
 
     }
 
